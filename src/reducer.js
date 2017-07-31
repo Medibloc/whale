@@ -1,7 +1,10 @@
 import {fromJS} from 'immutable'
 import {addLoginRequest, verifyLoginRequest, loginVerified} from './core'
 
-export const INITIAL_STATE = fromJS({loginRequests: [], loginVerified: [], accounts: {}})
+export const INITIAL_STATE = fromJS({
+  loginRequests: [],
+  loginVerified: [],
+  accounts: {}})
 
 export default function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
