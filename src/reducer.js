@@ -9,7 +9,7 @@ export const INITIAL_STATE = fromJS({
 export default function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'REQUEST_LOGIN':
-      return addLoginRequest(state, action.email)
+      return addLoginRequest(state, action.email, action.socketId)
     case 'VERIFY_LOGIN':
       console.log('Action of verify: ' + action)
       return verifyLoginRequest(state, action.email, action.account, action.priKey)
